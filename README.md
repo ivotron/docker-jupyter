@@ -1,6 +1,6 @@
 # jupyter
 
-Jupyter for python 2.7.x with pandas, matplotlib, pytables and h5py
+Jupyter for python 3.4.x with pandas, matplotlib, pytables and h5py
 
 Usage:
 
