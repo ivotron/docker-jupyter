@@ -1,7 +1,8 @@
 # jupyter
 
-Jupyter for python 3.4.x with pandas, matplotlib, pytables and h5py.
-For more jupyter stacks, see [here](https://github.com/jupyter/docker-stacks).
+Jupyter for python 3.4.x with pandas, matplotlib, pytables and h5py. This
+just takes Jupyter's [`minimal` image](https://github.com/jupyter/docker-stacks/tree/master/minimal-notebook) and installs the packages
+via `conda`. More images for distinct jupyter stacks [here](https://github.com/jupyter/docker-stacks).
 
 Usage:
 
