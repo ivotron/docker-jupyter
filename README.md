@@ -1,6 +1,7 @@
 # jupyter
 
-Jupyter for python 3.4.x with pandas, matplotlib, pytables and h5py
+Jupyter for python 3.4.x with pandas, matplotlib, pytables and h5py.
+For more jupyter stacks, see [here](https://github.com/jupyter/docker-stacks).
 
 Usage:
 
@@ -13,5 +14,5 @@ docker run \
 
 which makes `$PWD` the data folder that jupyter has available to it. 
 Put CSVs/notebooks/scripts in this folder and point your browser to 
-localhost:8888 (or whatever hostname/URL the docker host is exposed 
+`localhost:8888` (or whatever hostname/URL the docker host is exposed 
 on) to begin analyzing data.
