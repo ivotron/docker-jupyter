@@ -1,19 +1,24 @@
-# jupyter
+# Jupyter image without `jovyan` user
 
-Jupyter for python 3.4.x with pandas, matplotlib, pytables and h5py. This
-just takes Jupyter's [`minimal` image](https://github.com/jupyter/docker-stacks/tree/master/minimal-notebook) and installs the packages
-via `conda`. More images for distinct jupyter stacks [here](https://github.com/jupyter/docker-stacks).
+Replicates the [`scipy-notebook`][scipy] image, with extra Jupyterlab 
+extensions:
 
-Usage:
+- juptext
+- jupyterlab_vim
 
-```bash
-docker run \
-    -d -p 8888:8888 \
-    -v `pwd`:/home/jovyan/work \
-  ivotron/jupyter-pd-mpl-h5
-```
+Usage is similar as [upstream image][upstream] but processes run as 
+`root`.
 
-which makes `$PWD` the data folder that jupyter has available to it. 
-Put CSVs/notebooks/scripts in this folder and point your browser to 
-`localhost:8888` (or whatever hostname/URL the docker host is exposed 
-on) to begin analyzing data.
+## Pre-built images
+
+Available at [`ivotron/jupyter`][hub]. Tags are similar to upstream 
+tags.
+
+## Motivation
+
+On MacOS and Windows, being `root` inside a container is fine. Same 
+for Linux when using [`podman`](https://podman.io).
+
+[scipy]: https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#jupyter-scipy-notebook
+[upstream]: https://github.com/jupyter/docker-stacks
+[hub]: https://hub.docker.com/repository/docker/ivotron/jupyter
