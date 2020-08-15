@@ -7,7 +7,16 @@ extensions:
 - jupyterlab_vim
 
 Usage is similar as [upstream image][upstream] but processes run as 
-`root`.
+`root`, for example:
+
+```bash
+docker run --rm \
+  -p 8888:8888 \
+  -v "$PWD":/workspace \
+  -w /workspace \
+  ivotron/jupyter:9b87b1625445 \
+    jupyter lab --allow-root --NotebookApp.token=''
+```
 
 ## Pre-built images
 
